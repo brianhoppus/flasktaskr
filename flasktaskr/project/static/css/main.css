@@ -118,3 +118,14 @@ h2{
     text-decoration:none;
     position:relative;
 }
+body {
+    padding: 60px 0;
+    background: #ffffff;
+}
+.footer {
+    padding-top: 30px;
+}
+.error {
+    color: red;
+    font-size: .8em;
+}
