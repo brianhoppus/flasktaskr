@@ -155,5 +155,20 @@ class TasksTests(unittest.TestCase):
             b"You can only delete tasks that belong to you.", response.data
         )
 
+    def test_default_user_role(self):
+        db.session.add(
+            User(
+                "Johnny",
+                "john@doe.com",
+                "johnny"
+            )
+        )
+        db.session.commit()
+        users = db.session.query(User).all()
+        print(users)
+        for user in users:
+            self.assertEquals(user.role, "user")
+
+
 if __name__ == "__main__":
     unittest.main()
