@@ -30,7 +30,7 @@ def open_tasks():
 
 def closed_tasks():
     return db.session.query(Task).filter_by(
-        status="1").order_by(Task.due_date.asc())
+        status="0").order_by(Task.due_date.asc())
 
 
 # routes #
