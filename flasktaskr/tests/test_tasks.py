@@ -207,6 +207,14 @@ class TasksTests(unittest.TestCase):
         db.session.add(new_user)
         db.session.commit()
 
+    def test_task_template_displays_logged_in_user_name(self):
+        self.register(
+            "Fletcher", "fletcher@realpython.com", "python101", "python101"
+        )
+        self.login("Fletcher", "python101")
+        response = self.app.get("tasks/", follow_redirects=True)
+        self.assertIn(b"Fletcher", response.data)
+
 
 if __name__ == "__main__":
     unittest.main()
