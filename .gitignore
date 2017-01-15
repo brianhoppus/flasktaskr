@@ -4,3 +4,4 @@ venv
 *.db
 .coverage
 htmlcov
+.DS_Store

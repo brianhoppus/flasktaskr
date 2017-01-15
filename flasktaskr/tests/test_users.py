@@ -1,9 +1,9 @@
 import os
 import unittest
 
-from views import app, db
-from _config import basedir
-from models import User
+from project import app, db
+from project._config import basedir
+from project.models import User
 
 TEST_DB = "test.db"
 
@@ -105,7 +105,7 @@ class UsersTests(unittest.TestCase):
         response = self.register(
             "Michael", "michael@realpython.com", "python", "python"
         )
-        self.assertIn(b"That username and/or email already exist.",
+        self.assertIn(b"That username and/or email already exists.",
                       response.data
         )
 
@@ -122,7 +122,7 @@ class UsersTests(unittest.TestCase):
     def test_duplicate_user_registration_throws_error(self):
         self.register("Fletcher", "fletcher@realpython.com", "python101", "python101")
         response = self.register("Fletcher", "fletcher@realpython.com", "python101", "python101")
-        self.assertIn(b"That username and/or email already exist.", response.data)
+        self.assertIn(b"That username and/or email already exists.", response.data)
 
     def test_user_login_field_errors(self):
         response = self.app.post(

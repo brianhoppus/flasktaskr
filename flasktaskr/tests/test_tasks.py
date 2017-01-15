@@ -1,9 +1,9 @@
 import os
 import unittest
 
-from views import app, db
-from _config import basedir
-from models import Task, User
+from project import app, db
+from project._config import basedir
+from project.models import Task, User
 
 TEST_DB = "test.db"
 
@@ -116,7 +116,7 @@ class TasksTests(unittest.TestCase):
         self.app.get("tasks/", follow_redirects=True)
         self.create_task()
         response = self.app.get("complete/1/", follow_redirects=True)
-        self.assertIn(b"The task was marked as complete.", response.data)
+        self.assertIn(b"The task is complete. Nice.", response.data)
 
     def test_users_can_delete_tasks(self):
         self.create_user("Michael", "michael@realpython.com", "python")
