@@ -5,3 +5,4 @@ venv
 .coverage
 htmlcov
 .DS_Store
+*.log
