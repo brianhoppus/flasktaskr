@@ -49,6 +49,11 @@ class MainTests(unittest.TestCase):
 #        response = self.login("Jeremey", "django")
 #        self.assertEquals(response.status_code, 500)
 
+    def test_inde(self):
+        """ Ensure flask was setup correctly. """
+        response = self.app.get("/", content_type="html/text")
+        self.assertEqual(response.status_code, 200)
+
 
 if __name__ == "__main__":
     unittest.main()
