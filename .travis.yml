@@ -12,4 +12,6 @@ deploy:
     secure: ypfBCEh9fl+rMJggkdT1iFcwgVA8h+ZgOdJtSm/bXiEjMczJxT6ue8Zmva5OY4aTKFx+cLBWuxXyZ9ViWD7bNEeGA1EAPlNf4bCEwF6ZOf+yybraeffoUeyZ3ZjF8tSusgaYDyPFTctmLYU4rc64KaiC0Q3zp1qkgTL4ZzFWR+eeLamUEM9nSFacTEdMNpbZAIgX/qrMLdYY1LbSAThfFIRishpglG3L2EoM6mHk9XhiRpmn1wo5MpxE1ZyPPFBN+u5xdKl3TndyvaaRaQuoj2MXEfzgWoyClcYqYS+cgqNMZFhtvBi3D15JNOfm1D/j4k1OMfy6IZYyb5lMo2rxWfB0JPkBNBK10ptXbc/efgXXPawhZby6hUERX6+bW2dg6SoGZniqo3g8E4tBAdH2J7pU6Ww6xb4+T8qSRVKYXJMeHif9nZacLlMgzOQ32XEnCEFivdaQk1lvoTtWNmHyWzkE0nQOYIwJRJ8xxTJQ9nxySyudn8sWyp5MaDdLEqFFs5Mp2IOUorBuYb+gkNqeJmImV32N7629NYnXw+CM+ZXs1xjeD3xkDpc5GuBBNaNX/3ym2IhBiYsMn/qMeacbIYzC3RkKltGL7RcepPzAP70OrnG65drxA6GJ7kn7udl7NWQigo8UtTu7WraX+5z5v6PVhynAfeHY+65ymcNddAE=
   app: stark-chamber-72038
   on:
+    branch: master
+    python: '3.5'
     repo: brianhoppus/flasktaskr
