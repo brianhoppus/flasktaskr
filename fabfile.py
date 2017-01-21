@@ -13,7 +13,7 @@ def commit():
 
 def push():
     local("git branch")
-    branch = input("Which branch do you want to push to?")
+    branch = input("Which branch do you want to push to? ")
     local("git push origin {}".format(branch))
 
 def prepare():
