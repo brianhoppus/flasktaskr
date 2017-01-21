@@ -8,7 +8,7 @@ def test():
         abort("Aborted at user request.")
 
 def commit():
-    message = raw_input("Enter a git commit message: ")
+    message = input("Enter a git commit message: ")
     local("git add . && git commit -am '{}'".format(message))
 
 def push():
